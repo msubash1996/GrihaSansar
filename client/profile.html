@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: blue)
+            background-size: cover;
+            background-position: center;
+        }
+
+        h2 {
+            text-align: center;
+            color:black;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        table td, table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            color: #333;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        div {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 5px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>  
+    <h2>Profile Page</h2>
+    <div>
+        <p>Your account details are below:</p>
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td>{{ account['username'] }}</td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>{{ account['password'] }}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{ account['email'] }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

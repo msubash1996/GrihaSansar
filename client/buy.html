@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Buy a House</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='buy.css') }}">
+		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="img"></div>
+		<div class="left">
+			<a href="/">
+			  <div class="logo">
+				<i class="uil uil-house-user"></i><p><span>GrihA</span>Sansar</p>
+			  </div>
+			</a>
+			<div class="buy">
+				<h1>Buy/Rent a House</h1>
+				<form action="{{ url_for('buy_house') }}" method="post">
+					<label for="name">
+						<i class="fas fa-user"></i>
+					</label>
+					<input type="text" name="name" placeholder="Name" id="name" required>
+					<label for="email">
+						<i class="fas fa-envelope"></i>
+					</label>
+					<input type="email" name="email" placeholder="Email" id="email" required>
+					<label for="phone">
+						<i class="fas fa-phone"></i>
+					</label>
+					<input type="tel" name="phone" placeholder="Phone" id="phone" required>
+					<label for="location">
+						<i class="fas fa-map-marker"></i>
+					</label>
+					<input type="text" name="location" placeholder="Location" id="location" required>
+					<label for="budget">
+						<i class="fas fa-money-bill-wave"></i>
+					</label>
+					<input type="number" name="budget" placeholder="Budget" id="budget" required>
+					<label for="message">
+						<i class="fas fa-comment"></i>
+					</label>
+					<textarea name="message" placeholder="Message" id="message"></textarea>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
